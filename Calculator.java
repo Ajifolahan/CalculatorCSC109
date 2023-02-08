@@ -28,7 +28,13 @@ public class Calculator {
             break;     
         }
 
-        System.out.println("Result = " + result);
+        if(number2 == 0 && response.equalsIgnoreCase("Division")){
+            System.out.println("Error: Divide by Zero");
+        } else {
+            System.out.println("Result = " + result);
+        }
+ 
+        
         scanner.close();
          
 
