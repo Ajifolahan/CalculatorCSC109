@@ -6,21 +6,30 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         int number1 = scanner.nextInt();
         int number2 = scanner.nextInt();
-        System.out.println(
-                "Hey, do you want to perform a subtraction or addition on these numbers.Type in subtraction or addition ");
-        String response = scanner.nextLine();
         scanner.nextLine();
 
-        if(response.equalsIgnoreCase("Addition")){
-            int result = number1 + number2;
-            
-        } else {
-            int result = number1 - number2;
-            System.out.println("Result = " + result);
-        }
-        
+        int result = 0;
+        System.out.println(
+                "Hey, do you want to perform a subtraction,addition, multiplication or division on these numbers.Type in your choice.");
+        String response = scanner.nextLine();
 
-        
+        switch(response.toUpperCase()){
+            case "SUBTRACTION" : 
+            result = number1 - number2; 
+            break;
+            case "ADDITION" : 
+            result = number1 + number2;
+            break;
+            case "DIVISION" : 
+            result = number1 / number2;
+            break;
+            case "MULTIPLICATION" : 
+            result = number1 * number2;
+            break;     
+        }
+
+        System.out.println("Result = " + result);
+         
 
     }
 
