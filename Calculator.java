@@ -4,11 +4,11 @@ public class Calculator {
     public static void main(String[] args) {
         System.out.println("Enter 2 numbers");
         Scanner scanner = new Scanner(System.in);
-        int number1 = scanner.nextInt();
-        int number2 = scanner.nextInt();
+        Double number1 = scanner.nextDouble();
+        Double number2 = scanner.nextDouble();
         scanner.nextLine();
 
-        int result = 0;
+        Double result = 0.0;
         System.out.println(
                 "Hey, do you want to perform a subtraction,addition, multiplication or division on these numbers.Type in your choice.");
         String response = scanner.nextLine();
@@ -29,6 +29,7 @@ public class Calculator {
         }
 
         System.out.println("Result = " + result);
+        scanner.close();
          
 
     }
